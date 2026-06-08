@@ -4,6 +4,8 @@
 
 An **open-source, self-hostable AI trading bot for [Polymarket](https://polymarket.com)** prediction markets. It pulls live markets from Polymarket's public **Gamma API**, scores market quality, generates **mean-reversion** signals (longshot-bias and favorite-fade), gates each idea through an LLM "risk desk," sizes positions with the **Kelly criterion**, and tracks a full **paper-trading** P&L ledger — built on **React + Hono + Cloudflare Workers + D1** and deployable in one click via [Clawnify](https://clawnify.com).
 
+<img width="1458" height="938" alt="Image" src="https://github.com/user-attachments/assets/5830bbef-a878-4851-99ec-d9b8889a5858" />
+
 > **Paper-trading by default — no wallet key, no real money, nothing to drain.** Most "Polymarket trading bot" repos ask you to paste a funded wallet private key into unaudited code. This one doesn't: it simulates against live prices, and live CLOB execution stays disabled behind an explicit, auditable seam. Trade the strategy, not your savings.
 
 Use it as a research desk for **algorithmic prediction-market trading**, a quant sandbox for **mean reversion and Kelly sizing**, or a starting point for your own Polymarket strategy.
