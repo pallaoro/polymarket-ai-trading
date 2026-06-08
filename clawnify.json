@@ -1,0 +1,19 @@
+{
+  "$schema": "https://app.clawnify.com/schema/v1/clawnify.json",
+  "name": "Polymarket AI Trader",
+  "description": "Paper-trading desk for Polymarket prediction markets. Pulls live markets from the public Gamma API, scores market quality, surfaces mean-reversion signals (longshot + favorite-fade), AI-gates each idea with your model, sizes positions with fractional Kelly, and tracks a simulated P&L ledger. Paper-only by default with a built-in seam to switch to live CLOB execution.",
+  "template": {
+    "displayName": "Polymarket AI Trader",
+    "category": "Finance"
+  },
+  "app": {
+    "framework": "react+hono",
+    "database": true,
+    "storage": false
+  },
+  "env": {
+    "required": ["RELAYER_API_KEY", "RELAYER_API_KEY_ADDRESS"],
+    "oneOf": [["OPENROUTER_API_KEY"]],
+    "optional": ["POLYMARKET_MODEL"]
+  }
+}
